@@ -92,12 +92,14 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 
 # Flags 
-#COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP_CAMERA_ABI_HACK
 
 # QCOM hardware
-#BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := true
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
+TARGET_QCOM_DISPLAY_VARIANT := caf
+#TARGET_QCOM_AUDIO_VARIANT := caf
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
@@ -131,3 +133,42 @@ TARGET_BOOTANIMATION_PRELOAD := true
 BOARD_HAVE_LOW_LATENCY_AUDIO := true            
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+
+ifeq ($(HAVE_SELINUX),true)
+
+
+BOARD_SEPOLICY_DIRS += \
+        device/lge/geefhd-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+	file_contexts \
+	property_contexts \
+	te_macros \
+	bluetooth_loader.te \
+	bridge.te \
+	camera.te \
+	conn_init.te \
+	device.te \
+	dhcp.te \
+	domain.te \
+	drmserver.te \
+	file.te \
+	kickstart.te \
+	init.te \
+	mediaserver.te \
+	mpdecision.te \
+	netmgrd.te \
+	property.te \
+	qmux.te \
+	rild.te \
+	rmt.te \
+	sensors.te \
+	surfaceflinger.te \
+	system.te \
+	tee.te \
+	thermald.te \
+	ueventd.te \
+	wpa_supplicant.te
+
+endif

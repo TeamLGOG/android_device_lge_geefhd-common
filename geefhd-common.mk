@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 # Non-Ramdisk Init Scripts
 PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/scripts/kickstart_checker.sh:system/etc/kickstart_checker.sh \
-        device/lge/geefhd-common/scripts/init.geefhd.bt.sh:system/etc/init.geefhd.bt.sh \
+    device/lge/geefhd-common/scripts/init.geefhd.bt.sh:system/etc/init.geefhd.bt.sh \
 	device/lge/geefhd-common/scripts/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh \
  	device/lge/geefhd-common/scripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh
 
@@ -224,7 +224,9 @@ PRODUCT_PACKAGES += \
 	gps.msm8960
 
 PRODUCT_PACKAGES += \
-	bdAddrLoader 
+	bdAddrLoader \
+	libwfcu \
+	conn_init
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
