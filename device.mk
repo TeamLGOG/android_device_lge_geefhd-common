@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL geehrc devices, and
-# are also specific to geehrc devices
+# This file includes all definitions that apply to ALL gee-series devices, and
+# are also specific to geefhd devices
 #
 # Everything in this directory will become public
 
@@ -33,6 +33,10 @@ PRODUCT_PACKAGES := \
 
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/lge/gkatt/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
 
 # Enable for debugging
 PRODUCT_PROPERTY_OVERRIDES += \
