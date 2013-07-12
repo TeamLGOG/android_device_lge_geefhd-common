@@ -30,6 +30,21 @@ TARGET_KERNEL_SOURCE := kernel/lge/geefhd
 # assert
 TARGET_OTA_ASSERT_DEVICE := gkatt
 
+## TWRP Flags
+DEVICE_RESOLUTION := 1080x1920
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_15x24.h\"
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+RECOVERY_SDCARD_ON_DATA := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+# I'll enable this later just for ext_sd
+TW_NO_USB_STORAGE := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+# disable SD partitioning
+BOARD_HAS_NO_REAL_SDCARD := true
+
 # board-info
 TARGET_BOARD_INFO_FILE := device/lge/gkatt/board-info.txt
 
