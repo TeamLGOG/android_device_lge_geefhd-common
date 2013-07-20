@@ -30,6 +30,9 @@ TARGET_KERNEL_SOURCE := kernel/lge/geefhd
 # assert
 TARGET_OTA_ASSERT_DEVICE := gkatt
 
+## Enable Loki Recovery
+ENABLE_LOKI_RECOVERY := true
+
 ## TWRP Flags
 DEVICE_RESOLUTION := 1080x1920
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
