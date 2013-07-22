@@ -1,0 +1,36 @@
+# LGE_P1_FWK baik.han@lge.com 2011-07-04 Convert MHL RCP codes into media keys and transfer theses to the input manager {
+# LGE_P1_FWK baik.han@lge.com 2011-07-28 change MHL RCP code mapping table {
+key 103   DPAD_UP    WAKE
+key 108   DPAD_DOWN    WAKE
+key 200   MEDIA_PLAY_PAUSE    WAKE
+key 201   MEDIA_PLAY_PAUSE    WAKE
+key 166   MEDIA_STOP          WAKE
+key 168   MEDIA_REWIND        WAKE
+key 208   MEDIA_FAST_FORWARD  WAKE
+key 28    ENTER    WAKE
+key 102   HOME              WAKE
+key 105   DPAD_LEFT         WAKE_DROPPED
+key 106   DPAD_RIGHT        WAKE_DROPPED
+key 139   MENU              WAKE_DROPPED
+key 158   BACK              WAKE_DROPPED
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 115   VOLUME_UP         WAKE
+key 114   VOLUME_DOWN       WAKE
+
+key 111   DEL               WAKE
+key 241   MEDIA_NEXT        WAKE
+key 242   MEDIA_PREVIOUS    WAKE
+key 163   MEDIA_NEXT        WAKE
+key 164   MEDIA_PREVIOUS    WAKE
+
+# LGE_P1_FWK baik.han@lge.com 2011-07-28 change MHL RCP code mapping table }
+# LGE_P1_FWK baik.han@lge.com 2011-07-04 Convert MHL RCP codes into media keys and transfer theses to the input manager }
