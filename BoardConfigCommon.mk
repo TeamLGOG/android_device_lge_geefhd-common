@@ -135,9 +135,6 @@ BOARD_HAVE_LOW_LATENCY_AUDIO := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 
-ifeq ($(HAVE_SELINUX),true)
-
-
 BOARD_SEPOLICY_DIRS += \
         device/lge/geefhd-common/sepolicy
 
@@ -170,5 +167,3 @@ BOARD_SEPOLICY_UNION += \
 	thermald.te \
 	ueventd.te \
 	wpa_supplicant.te
-
-endif
