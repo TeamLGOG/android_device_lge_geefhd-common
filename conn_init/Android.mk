@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter geehrc geehrc4g_spr_us geeb geeb_att_us geeb_ca geehrc_intl,$(TARGET_DEVICE)),)
+ifneq ($(filter geefhd_att_us,$(TARGET_DEVICE)),)
 
 LOCAL_PATH:= $(call my-dir)
 
