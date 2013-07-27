@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
 # Non-Ramdisk Init Scripts
 PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/scripts/kickstart_checker.sh:system/etc/kickstart_checker.sh \
-        device/lge/geefhd-common/scripts/init.gee.bt.sh:system/etc/init.gee.bt.sh \
+	device/lge/geefhd-common/scripts/init.geefhd.bt.sh:system/etc/init.geefhd.bt.sh \
 	device/lge/geefhd-common/scripts/init.qcom.mdm_links.sh:system/etc/init.qcom.mdm_links.sh \
  	device/lge/geefhd-common/scripts/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
 	device/lge/geefhd-common/scripts/efsbackup.sh:system/bin/efsbackup.sh
