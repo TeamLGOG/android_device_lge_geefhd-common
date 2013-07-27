@@ -49,7 +49,9 @@ static int wifi_check_qcom_cfg_files()
 
         // Write MAC String
         wfc_util_atoh( macAddress, 12, (unsigned char *)hex, 6);
+#ifdef CONFIG_LGE_WLAN_QCOM_PATCH
         wfc_util_qcom_check_config((unsigned char *)hex);
+#endif
     }
     return 1;
 }
