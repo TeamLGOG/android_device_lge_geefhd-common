@@ -86,13 +86,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/keylayouts/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
 	device/lge/geefhd-common/keylayouts/external_kbd.kl:system/usr/keylayout/external_kbd.kl \
-	device/lge/geefhd-common/keylayouts/keypad_8064.kl:system/usr/keylayout/keypad_8064.kl \
+	device/lge/geefhd-common/keylayouts/gk-keypad-8064.kl:system/usr/keylayout/gk-keypad-8064.kl \
 	device/lge/geefhd-common/keylayouts/MHLRCP.kl:system/usr/keylayout/MHLRCP.kl \
 	device/lge/geefhd-common/keylayouts/osp3-input.kl:system/usr/keylayout/osp3-input.kl 
 
 # Input calibration
 PRODUCT_COPY_FILES += \
-        device/lge/geefhd-common/input/touch_dev.idc:system/usr/idc/touch_dev.idc \
+	device/lge/geefhd-common/input/touch_dev.idc:system/usr/idc/touch_dev.idc \
 	device/lge/geefhd-common/input/osp3-input.idc:system/usr/idc/osp3-input.idc
 
 # These are the hardware-specific features
