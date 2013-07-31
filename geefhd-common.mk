@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_COPY_FILES += \
+        device/lge/geefhd-common/wifimac/wlan-precheck:system/bin/wlan-precheck \
         device/lge/geefhd-common/wifi/wpa_supplicant.conf:obj/etc/wifi/wpa_supplicant.conf \
         device/lge/geefhd-common/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
@@ -226,7 +227,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	bdAddrLoader \
 	libwfcu \
-	conn_init
+	conn_init \
+	wifimac
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
