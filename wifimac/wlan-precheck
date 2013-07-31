@@ -2,4 +2,6 @@
 
 if [ ! -s /data/misc/wifi/config ]; then
 	/system/bin/wifimac
+	chown system.wifi /data/misc/wifi/config
+	chmod 640 /data/misc/wifi/config
 fi
