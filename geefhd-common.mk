@@ -162,7 +162,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring.multiple=0
-#        ro.telephony.ril_class=LgeLteRIL
+
+# Our Modem responds slowly
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.telephony.slowModem=1
 
 # QC RIL path for rild
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
