@@ -24,6 +24,9 @@ on init
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
 
+    mkdir /sns 0775 system system
+    mkdir /sns/cal 0771 system system
+
 on fs
     # mount ALL THE THINGS
     mount_all ./fstab.geefhd
