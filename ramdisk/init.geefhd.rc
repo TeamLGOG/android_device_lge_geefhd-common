@@ -254,9 +254,6 @@ on post-fs-data
    chmod 644 /sys/class/leds/button-backlight/brightness
    chmod 644 /sys/class/leds/button-backlight/max_brightness
 
-   # Turn off default blinking LEDs
-   write /sys/devices/i2c-0/0-0032/led_pattern 2
-
     # Net permissions
     chown system system /sys/kernel/ipv4/tcp_wmem_min
     chown system system /sys/kernel/ipv4/tcp_wmem_def
