@@ -212,6 +212,16 @@ on post-fs-data
    chmod 646 /sys/class/leds/red/brightness
    chmod 646 /sys/class/leds/green/brightness
    chmod 646 /sys/class/leds/blue/brightness
+   chown system system /sys/devices/i2c-0/0-0032/led_blink
+   chown system system /sys/devices/i2c-0/0-0032/leds/B/brightness
+   chown system system /sys/devices/i2c-0/0-0032/leds/G/brightness
+   chown system system /sys/devices/i2c-0/0-0032/leds/R/brightness
+   chown system system /sys/devices/i2c-0/0-0032/led_pattern
+   chmod 0660 /sys/devices/i2c-0/0-0032/led_blink
+   chmod 0660 /sys/devices/i2c-0/0-0032/leds/B/brightness
+   chmod 0660 /sys/devices/i2c-0/0-0032/leds/G/brightness
+   chmod 0660 /sys/devices/i2c-0/0-0032/leds/R/brightness
+   chmod 0660 /sys/devices/i2c-0/0-0032/led_pattern
 
    # Enable vibrate
    chown system system /sys/class/timed_output/vibrator/enable

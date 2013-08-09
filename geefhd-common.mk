@@ -97,6 +97,10 @@ PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/input/touch_dev.idc:system/usr/idc/touch_dev.idc \
 	device/lge/geefhd-common/input/osp3-input.idc:system/usr/idc/osp3-input.idc
 
+# Liblight
+PRODUCT_PACKAGES := \
+	lights.msm8960
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
