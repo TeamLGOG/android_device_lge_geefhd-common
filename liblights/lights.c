@@ -290,10 +290,7 @@ static int set_light_leds(struct light_state_t const *state, int type)
             err = write_leds(NULL);
 switched:
             g_cur_led = i;
-        } else if ( g_cur_led == -1 ) {
-			/* init */
-			write_int(LED_PATTERN, 0);
-		}
+        }
     }
 
     return err;
