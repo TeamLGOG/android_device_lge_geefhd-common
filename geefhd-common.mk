@@ -204,10 +204,6 @@ PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	libaudio-resampler
 
-
-PRODUCT_PACKAGES += \
-	hci_qcomm_init
-
 PRODUCT_PACKAGES += \
 	power.msm8960
 
