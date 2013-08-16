@@ -41,6 +41,24 @@ on early-boot
     setrlimit 8 67108864 67108864
 
 on boot
+
+    # bluetooth
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
+
+    # bluetooth LPM
+    chmod 0220 /proc/bluetooth/sleep/lpm
+    chmod 0220 /proc/bluetooth/sleep/btwrite
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -336,20 +354,6 @@ service config_bluetooth /system/bin/sh /system/etc/init.geefhd.bt.sh "onboot"
     seclabel u:r:bluetooth_loader:s0
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.geefhd.bt.sh
-    class late_start
-    user bluetooth
-    group qcom_oncrpc bluetooth net_bt_admin system
-    seclabel u:r:bluetooth_loader:s0
-    disabled
-    oneshot
-
-on property:bluetooth.hciattach=true
-    start hciattach
-
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
-
 service bridgemgrd /system/bin/bridgemgrd
     class main
     user radio
@@ -468,12 +472,6 @@ service conn_init /system/bin/logwrapper /system/bin/conn_init
     class late_start
     user system
     group system wifi
-    oneshot
-
-service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x
-    class main
-    user bluetooth
-    group system bluetooth
     oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
