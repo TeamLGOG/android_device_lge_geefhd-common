@@ -187,9 +187,10 @@ static int write_leds(const struct led_config *led)
     static const struct led_config led_off = {0, 0, 0};
 
     char blink[32];
-    int count, err;
+    int count;
     int red, green, blue;
     int is_solid;
+    int err = 0;
 
     if (led == NULL)
         led = &led_off;
