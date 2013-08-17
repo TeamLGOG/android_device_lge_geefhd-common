@@ -17,6 +17,7 @@ LOCAL_PATH:= $(call my-dir)
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
 
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME), geefhd)
 LOCAL_SRC_FILES := lights.c
 
 
@@ -29,3 +30,4 @@ LOCAL_MODULE := lights.msm8960
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+endif
