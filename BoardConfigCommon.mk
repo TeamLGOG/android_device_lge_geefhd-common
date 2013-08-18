@@ -67,6 +67,9 @@ COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 #Include our own header for camera hal
 TARGET_SPECIFIC_HEADER_PATH := device/lge/geefhd-common/include
 
+# Camera
+COMMON_GLOBAL_CFLAGS += -DLG_CAMERA_HARDWARE
+
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
@@ -101,7 +104,7 @@ WIFI_DRIVER_FW_PATH_P2P     := "/etc/firmware/fw_bcmdhd_p2p.bin"
 BOARD_RIL_CLASS := ../../../device/lge/geefhd-common/ril
 
 # Flags 
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP_CAMERA_ABI_HACK
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
