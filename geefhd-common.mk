@@ -19,7 +19,7 @@
 #
 # Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS := device/lge/geefhd-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/geefhd-common/overlay
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -28,7 +28,7 @@ DEVICE_PACKAGE_OVERLAYS := device/lge/geefhd-common/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES := \
     charger_res_images \
     charger
 
@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/input/osp3-input.idc:system/usr/idc/osp3-input.idc
 
 # Liblight
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
 	lights.msm8960
 
 # These are the hardware-specific features
