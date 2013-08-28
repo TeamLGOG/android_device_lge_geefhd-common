@@ -148,6 +148,8 @@ TARGET_BOOTANIMATION_PRELOAD := true
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+# Charger
+COMMON_GLOBAL_CFLAGS += -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
 
 BOARD_SEPOLICY_DIRS += \
         device/lge/geefhd-common/sepolicy
