@@ -77,6 +77,10 @@ on boot
     #Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 
+    #Set permissions for IR Blaster
+    chmod 0777 /dev/ttyHSL1
+    chown system system /dev/ttyHSL1
+
     #port-bridge
     chmod 0660 /dev/smd0
     chown system system /dev/smd0
