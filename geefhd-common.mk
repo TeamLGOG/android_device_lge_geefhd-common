@@ -222,8 +222,8 @@ PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	libaudio-resampler
 
-PRODUCT_PACKAGES += \
-	power.msm8960
+#PRODUCT_PACKAGES += \
+#	power.msm8960
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
