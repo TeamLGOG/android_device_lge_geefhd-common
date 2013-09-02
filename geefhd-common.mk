@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
 	device/lge/geefhd-common/configs/media_codecs.xml:system/etc/media_codecs.xml 
 
+# Mixer paths
+PRODUCT_COPY_FILES += \
+	device/lge/geefhd-common/configs/mixer_paths.xml:system/etc/mixer_paths.xml
+
 # Non-Ramdisk Init Scripts
 PRODUCT_COPY_FILES += \
 	device/lge/geefhd-common/scripts/kickstart_checker.sh:system/etc/kickstart_checker.sh \
