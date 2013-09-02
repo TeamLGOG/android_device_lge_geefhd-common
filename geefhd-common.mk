@@ -157,16 +157,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fetch-swv:system/bin/fetch-swv
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.opengles.version=131072
+	ro.opengles.version=196608
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=480
 
 # Audio Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.handset.mic.type=digital \
+    persist.audio.dualmic.config=endfire \
+    persist.audio.fluence.voicecall=true \
 	persist.audio.handset.mic=digital \
 	persist.audio.fluence.mode=endfire \
-        persist.audio.lowlatency.rec=false \
+    persist.audio.lowlatency.rec=false \
 	af.resampler.quality=4
 
 # Do not power down SIM card when modem is sent to Low Power Mode.
@@ -214,7 +217,6 @@ PRODUCT_PACKAGES += \
 	copybit.msm8960
 
 PRODUCT_PACKAGES += \
-	alsa.msm8960 \
 	audio_policy.msm8960 \
 	audio.primary.msm8960 \
 	audio.a2dp.default \
@@ -250,6 +252,9 @@ PRODUCT_PACKAGES += \
 	conn_init \
 	wifimac
 
+PRODUCT_PACKAGES += \
+	keystore.msm8960
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
 
@@ -276,3 +281,4 @@ WIFI_BAND := 802_11_ABG
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
