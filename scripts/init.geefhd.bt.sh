@@ -138,7 +138,6 @@ config_bt ()
        if [ "$btsoc" != "ath3k" ] && [ "$socid" != "130" ]
        then
            setprop ro.bluetooth.hfp.ver 1.6
-           setprop ro.qualcomm.bt.hci_transport smd
        fi
        ;;
     *)

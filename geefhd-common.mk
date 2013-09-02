@@ -231,9 +231,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #	power.msm8960
 
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.qualcomm.bt.hci_transport=smd
-
 PRODUCT_PACKAGES += \
         libmm-omxcore \
 	libdivxdrmdecrypt \
