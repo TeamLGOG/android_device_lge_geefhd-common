@@ -48,6 +48,9 @@ PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/ramdisk/init.geefhd.usb.rc:root/init.geefhd.usb.rc \
         device/lge/geefhd-common/ramdisk/init.qcom.sh:root/init.qcom.sh
 
+# Recovery ramdisk
+PRODUCT_COPY_FILES += \
+        device/lge/geefhd-common/ramdisk/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # WiFi
 PRODUCT_COPY_FILES += \
