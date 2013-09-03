@@ -25,4 +25,10 @@
 
 LOCAL_PATH := $(call my-dir)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(BOARD_VENDOR),lge)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8960)
+ifneq ($(filter geefhd_att_us,$(TARGET_DEVICE)),)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
+endif
+endif

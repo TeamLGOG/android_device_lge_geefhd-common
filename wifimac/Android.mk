@@ -13,7 +13,6 @@
 # limitations under the License.
 
 
-ifneq ($(filter geefhd, $(TARGET_BOOTLOADER_BOARD_NAME)),)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -28,4 +27,3 @@ LOCAL_MODULE := wifimac
 
 include $(BUILD_EXECUTABLE)
 
-endif

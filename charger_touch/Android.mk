@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ifneq ($(filter geefhd_att_us,$(TARGET_DEVICE)),)
-
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -26,5 +24,3 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/bin
 LOCAL_MODULE := charger_touch
 LOCAL_MODULE_OWNER := lge
 include $(BUILD_EXECUTABLE)
-
-endif

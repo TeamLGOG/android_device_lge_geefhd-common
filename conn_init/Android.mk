@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ifneq ($(filter geefhd_att_us,$(TARGET_DEVICE)),)
-
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -84,4 +82,3 @@ $(LOCAL_BUILT_MODULE):
 	$(hide) ln -sf $(TARGET) $(SYMLINK)
 	$(hide) touch $@
 
-endif
