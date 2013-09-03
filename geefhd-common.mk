@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/camera/CE170F02.bin:root/sbin/CE170F02.bin \
         device/lge/geefhd-common/camera/CE170F03.bin:root/sbin/CE170F03.bin
 
+# Recovery ramdisk
+PRODUCT_COPY_FILES += \
+        device/lge/geefhd-common/ramdisk/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
 # WiFi
 PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/wifimac/wlan-precheck:system/bin/wlan-precheck \
