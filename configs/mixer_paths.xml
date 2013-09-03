@@ -185,15 +185,15 @@
 
     <path name="voice-call bt-sco">
         <ctl name="Internal BTSCO SampleRate" value="8000" />
-        <ctl name="Voice Stub Tx Mixer INTERNAL_BT_SCO_TX" value="1" />
+        <ctl name="Voice Stub Tx Mixer AUX_PCM_UL_TX" value="1" />
         <ctl name="SLIMBUS_1_RX Mixer Voice Stub" value="1" />
         <ctl name="Voice Stub Tx Mixer SLIM_1_TX" value="1" />
-        <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voice Stub" value="1" />
-        <ctl name="SLIMBUS_1_RX Port Mixer INTERNAL_BT_SCO_TX" value="1" />
-        <ctl name="INTERNAL_BT_SCO_RX Port Mixer SLIM_1_TX" value="1" />
+        <ctl name="AUX_PCM_RX_Voice Mixer Voice Stub" value="1" />
+        <ctl name="SLIMBUS_1_RX Port Mixer AUX_PCM_UL_TX" value="1" />
+        <ctl name="AUXPCM_RX Port Mixer SLIM_1_TX" value="1" />
         <ctl name="SLIM_3_RX Channels" value="One" />
         <ctl name="SLIMBUS_3_RX_Voice Mixer Voice Stub" value="1" />
-        <ctl name="SLIMBUS_3_RX Port Mixer INTERNAL_BT_SCO_RX" value="1" />
+        <ctl name="SLIMBUS_3_RX Port Mixer AUX_PCM_DL_RX" value="1" />
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
