@@ -231,7 +231,7 @@ PRODUCT_PACKAGES += \
 #	power.msm8960
 
 PRODUCT_PACKAGES += \
-        libmm-omxcore \
+    libmm-omxcore \
 	libdivxdrmdecrypt \
 	libOmxVdec \
 	libOmxVenc \
@@ -252,8 +252,8 @@ PRODUCT_PACKAGES += \
 	conn_init \
 	wifimac
 
-PRODUCT_PACKAGES += \
-	keystore.msm8960
+#PRODUCT_PACKAGES += \
+#	keystore.msm8960
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
