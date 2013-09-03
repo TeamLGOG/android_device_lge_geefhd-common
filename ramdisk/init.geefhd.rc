@@ -37,10 +37,6 @@ on init
     setprop persist.radio.custom_ecc_hard "911,*911,#911,112,999,000,08,118,120,122,110,119,995,111,113,125,127,133"
 
 on fs
-    # mount ALL THE THINGS
-    mount_all ./fstab.geefhd
-    wait /dev/block/platform/msm_sdcc.1/by-name/modem
-    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro uid=1000,gid=1000,dmask=227,fmask=337
     restorecon /persist/.bt_nv.bin
     restorecon /sns/cal/sns.reg
     restorecon /sns/cal

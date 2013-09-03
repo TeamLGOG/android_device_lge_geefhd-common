@@ -46,8 +46,7 @@ PRODUCT_PACKAGES += Torch
 PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/ramdisk/init.geefhd.rc:root/init.geefhd.rc \
         device/lge/geefhd-common/ramdisk/init.geefhd.usb.rc:root/init.geefhd.usb.rc \
-        device/lge/geefhd-common/ramdisk/init.qcom.sh:root/init.qcom.sh \
-        device/lge/geefhd-common/ramdisk/fstab.geefhd:root/fstab.geefhd
+        device/lge/geefhd-common/ramdisk/init.qcom.sh:root/init.qcom.sh
 
 # Camera BINs
 PRODUCT_COPY_FILES += \
