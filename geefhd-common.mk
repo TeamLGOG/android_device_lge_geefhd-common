@@ -48,12 +48,6 @@ PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/ramdisk/init.geefhd.usb.rc:root/init.geefhd.usb.rc \
         device/lge/geefhd-common/ramdisk/init.qcom.sh:root/init.qcom.sh
 
-# Camera BINs
-PRODUCT_COPY_FILES += \
-        device/lge/geefhd-common/camera/CE170F00.bin:root/sbin/CE170F00.bin \
-        device/lge/geefhd-common/camera/CE170F01.bin:root/sbin/CE170F01.bin \
-        device/lge/geefhd-common/camera/CE170F02.bin:root/sbin/CE170F02.bin \
-        device/lge/geefhd-common/camera/CE170F03.bin:root/sbin/CE170F03.bin
 
 # WiFi
 PRODUCT_COPY_FILES += \
