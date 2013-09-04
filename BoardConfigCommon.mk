@@ -14,13 +14,26 @@
 # limitations under the License.
 #
 
+# We optimize for cortex-a15 since krait is closer to a15 than a9
+# and slightly benefits in testing done.
+
+TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mtune=cortex-a15 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mtune=cortex-a15 -mfloat-abi=softfp
+TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a15
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_ARMV7A := true
-TARGET_CPU_VARIANT := cortex-a9
+TARGET_ARCH_VARIANT_CPU := cortex-a15
+TARGET_CPU_VARIANT := krait
+TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+TARGET_USE_KRAIT_PLD_SET := true
+TARGET_KRAIT_BIONIC_PLDOFFS := 10
+TARGET_KRAIT_BIONIC_PLDTHRESH := 10
+TARGET_KRAIT_BIONIC_BBTHRESH := 64
+TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 TARGET_NO_BOOTLOADER := true
 
@@ -48,6 +61,8 @@ TW_NO_EXFAT := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 # disable SD partitioning
 BOARD_HAS_NO_REAL_SDCARD := true
+# Enable various prefetch optimizations
+COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 
 #Include our own header for camera hal
 TARGET_SPECIFIC_HEADER_PATH := device/lge/geefhd-common/include
