@@ -174,6 +174,8 @@
         <ctl name="STUB_RX Mixer Voice Stub" value="1" />
         <ctl name="Voice Stub Tx Mixer STUB_TX_HL" value="1" />
         <ctl name="Voice Stub Tx Mixer STUB_1_TX_HL" value="1" />
+        <ctl name="RX1 MIX2 INP1" value="IIR1" />
+        <ctl name="RX2 MIX2 INP1" value="IIR1" />
     </path>
 
     <path name="voice-call hdmi">
@@ -226,7 +228,7 @@
         <ctl name="RX3 MIX1 INP1" value="RX1" />
         <ctl name="RX3 MIX1 INP2" value="RX6" />
         <ctl name="RX4 DSM MUX" value="DSM_INV" />
-        <ctl name="RX3 Digital Volume" value="63" />
+        <ctl name="RX3 Digital Volume" value="68" />
         <ctl name="SLIM TX3 MUX" value="RMIX3" />
     </path>
 
@@ -241,13 +243,16 @@
     </path>
 
     <path name="handset">
+        <ctl name="ES325 RX1 Enable" value="1" />
+        <ctl name="ES325 TX1 Enable" value="1" />
+        <ctl name="ES325 INTERNAL ROUTE CONFIG" value="PRI MIC LOOPBACK" />
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RX1 MIX1 INP2" value="RX6" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="DAC1 Switch" value="1" />
         <ctl name="SLIM TX3 MUX" value="RMIX1" />
-        <ctl name="RX1 Digital Volume" value="60" />
+        <ctl name="RX1 Digital Volume" value="57" />
     </path>
 
     <path name="handset-mic">
@@ -287,7 +292,8 @@
 
     <path name="voice-speaker-mic">
         <path name="adc3" />
-        <ctl name="DEC4 Volume" value="87" />
+        <ctl name="DEC4 Volume" value="80" />
+        <ctl name="ADC3 Volume" value="100" />
     </path>
 
     <path name="voice-headphones">
