@@ -52,6 +52,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/ramdisk/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
+# GPS configuration
+PRODUCT_COPY_FILES += \
+        device/lge/geefhd-common/configs/gps.conf:system/etc/gps.conf
+
 # WiFi
 PRODUCT_COPY_FILES += \
         device/lge/geefhd-common/wifimac/wlan-precheck:system/bin/wlan-precheck \
